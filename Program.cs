@@ -36,11 +36,11 @@ for (int i = 0; i < salary.Length; i++)
 {
     Console.Write("│ {0, -8} │ ${1, -8} │ ${2, -26} │ ", monthes[i], salary[i], Math.Round(salary[i] * 0.02));
 
-    //if ((salary[i] - avg) > 0)
-    //    Console.WriteLine("+${0, -30}│", salary[i] - avg);
-    //else if ((salary[i] - avg) < 0)
-    //    Console.WriteLine("-${0, -30}│", avg - salary[i]);
-    //else if ((salary[i] - avg) == 0)
+    if ((salary[i] - avg) > 0)
+        Console.WriteLine("+${0, -30}│", salary[i] - avg);
+    else if ((salary[i] - avg) < 0)
+        Console.WriteLine("-${0, -30}│", avg - salary[i]);
+    else if ((salary[i] - avg) == 0)
         Console.WriteLine("{0, -31} │", "нет");
     pensiya += salary[i] * 0.02;
 }
